@@ -1,4 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to Bohang's homepage!
+
+## About Me
+I am a data scientist at Shopee. Previously, I received my Master's degree in Peking University.
+I am working on image processing algorithms and products, especially for image segmentation and object detection.
+
+## Education
+Master's degree at Peking University in Electronic Engineering, 2019
+Bachelor's degree at Huazhong University of Science and Technology in Electronic Engineering, 2016
 
 You can use the [editor on GitHub](https://github.com/vandesa003/vandesa003.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
