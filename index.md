@@ -1,5 +1,3 @@
-## Welcome to Bohang's homepage!
-
 ## About Me
 I am a data scientist at Shopee. Previously, I received my Master's degree in Peking University.
 
@@ -12,7 +10,7 @@ Bachelor's degree at Huazhong University of Science and Technology in Electronic
 
 ## Technology Communication
 My friend and I have a Wechat public platform. We unregularly post some technical sharing on it. We want to share the cutting-edge tech to others and also learn something new from others. Welcome to follow us and comment below our articles!
-![Image](https://github.com/vandesa003/vandesa003.github.io/edit/master/pic/TechDemic.jpg)
+![Image](pic/TechDemic.jpg)
 
 ## Selected Articles
 - [Python Learning](https://mp.weixin.qq.com/s/fYNBB0p1bQvoafpVKCF5Tw)
