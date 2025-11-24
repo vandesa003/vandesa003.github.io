@@ -9,18 +9,18 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-4 relative overflow-hidden">
+    <section id="skills" className="py-20 px-4 relative overflow-hidden bg-black">
       {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-900/10 to-transparent -z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white/5 to-transparent -z-10" />
 
       <div className="max-w-5xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-green-400"
+          className="text-4xl font-bold mb-16 text-center text-white tracking-tight"
         >
-          Technical Arsenal
+          TECHNICAL ARSENAL
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -31,14 +31,14 @@ const Skills = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/30 transition-all"
+              className="glass-panel p-8 rounded-2xl"
             >
-              <h3 className="text-xl font-bold text-white mb-6 border-b border-slate-800 pb-2">{category}</h3>
+              <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2 uppercase tracking-wide">{category}</h3>
               <div className="flex flex-wrap gap-3">
                 {items.map((item) => (
                   <span 
                     key={item} 
-                    className="px-4 py-2 bg-slate-800 rounded-full text-slate-300 text-sm font-medium hover:bg-cyan-900/30 hover:text-cyan-300 transition-colors cursor-default border border-transparent hover:border-cyan-500/30"
+                    className="px-4 py-2 bg-white/5 rounded-full text-slate-300 text-sm font-medium hover:bg-white/20 hover:text-white transition-colors cursor-default border border-white/10"
                   >
                     {item}
                   </span>

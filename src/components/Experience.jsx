@@ -102,25 +102,25 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 relative">
+    <section id="experience" className="py-20 px-4 relative bg-black">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500"
+          className="text-4xl font-bold mb-16 text-center text-white tracking-tight"
         >
-          Professional Experience
+          PROFESSIONAL EXPERIENCE
         </motion.h2>
 
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-slate-800 rounded-full" />
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-white/20" />
 
           {experiences.map((exp, index) => (
             <div key={index} className={`mb-16 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} relative`}>
               {/* Dot on the line */}
-              <div className="absolute left-[-5px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-950 z-10 mt-6" />
+              <div className="absolute left-[-4px] md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-white rounded-full border-4 border-black z-10 mt-6 shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
 
               {/* Content Card */}
               <motion.div 
@@ -130,21 +130,21 @@ const Experience = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className={`ml-8 md:ml-0 md:w-[45%] ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8 text-right'} `}
               >
-                <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-colors duration-300 backdrop-blur-sm">
+                <div className="glass-panel p-8 rounded-2xl hover:bg-white/10 transition-colors duration-300">
                   <div className={`flex flex-col ${index % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                     <h3 className="text-2xl font-bold text-white mb-1">{exp.company}</h3>
-                    <h4 className="text-xl text-cyan-400 mb-2">{exp.role}</h4>
-                    <div className="flex items-center text-slate-400 text-sm mb-4 gap-4">
+                    <h4 className="text-xl text-slate-300 mb-2 font-light">{exp.role}</h4>
+                    <div className="flex items-center text-slate-500 text-sm mb-6 gap-4">
                       <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {exp.period}</span>
                       <span className="flex items-center gap-1"><Briefcase className="w-4 h-4" /> {exp.location}</span>
                     </div>
-                    <p className="text-slate-300 mb-4">{exp.description}</p>
+                    <p className="text-slate-400 mb-6 leading-relaxed">{exp.description}</p>
                     
                     <div className="space-y-4 w-full">
                       {exp.projects.map((proj, pIndex) => (
-                        <div key={pIndex} className={`bg-slate-800/50 p-4 rounded-xl border-l-2 border-purple-500 ${index % 2 === 0 ? 'text-left' : 'text-right md:text-left'}`}>
-                          <h5 className="font-semibold text-purple-300">{proj.title}</h5>
-                          <p className="text-xs text-slate-500 mb-1 font-mono">{proj.tech}</p>
+                        <div key={pIndex} className={`bg-black/40 p-4 rounded-xl border border-white/5 ${index % 2 === 0 ? 'text-left' : 'text-right md:text-left'}`}>
+                          <h5 className="font-semibold text-white mb-1">{proj.title}</h5>
+                          <p className="text-xs text-slate-500 mb-2 font-mono uppercase tracking-wider">{proj.tech}</p>
                           <p className="text-sm text-slate-400">{proj.details}</p>
                         </div>
                       ))}

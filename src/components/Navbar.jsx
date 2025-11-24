@@ -16,13 +16,13 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
     >
-      <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-full px-6 py-3 shadow-lg shadow-cyan-500/10">
+      <div className="glass-panel rounded-full px-6 py-3 border border-white/20">
         <ul className="flex gap-8">
           {navItems.map((item) => (
             <li key={item.name}>
               <a 
                 href={item.href} 
-                className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-2 text-sm font-medium"
+                className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium"
               >
                 <item.icon className="w-4 h-4" />
                 <span className="hidden md:inline">{item.name}</span>

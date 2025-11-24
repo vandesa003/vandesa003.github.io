@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, BookOpen, ExternalLink } from "lucide-react";
+import { Trophy, BookOpen } from "lucide-react";
 
 const competitions = [
   {
@@ -61,22 +61,25 @@ const publications = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900/30">
+    <section id="projects" className="py-20 px-4 bg-black relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/5 to-transparent -z-10" />
+
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-500"
+          className="text-4xl font-bold mb-16 text-center text-white tracking-tight"
         >
-          Research & Achievements
+          RESEARCH & ACHIEVEMENTS
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Competitions Column */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-              <Trophy className="text-yellow-400" /> Competitions
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3 border-b border-white/10 pb-4">
+              <Trophy className="text-white w-6 h-6" /> Competitions
             </h3>
             <div className="space-y-6">
               {competitions.map((comp, index) => (
@@ -86,14 +89,14 @@ const Projects = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-yellow-500/50 transition-all hover:bg-slate-800"
+                  className="glass-card p-6 rounded-xl group"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-lg text-slate-200">{comp.title}</h4>
-                    <span className="text-xs font-mono bg-slate-900 px-2 py-1 rounded text-slate-400">{comp.platform}</span>
+                    <h4 className="font-bold text-lg text-white group-hover:text-white transition-colors">{comp.title}</h4>
+                    <span className="text-xs font-mono bg-white/10 px-2 py-1 rounded text-slate-300">{comp.platform}</span>
                   </div>
-                  <p className="text-yellow-400 font-semibold text-sm mb-2">{comp.rank}</p>
-                  <p className="text-slate-400 text-sm">{comp.description}</p>
+                  <p className="text-slate-300 font-semibold text-sm mb-2">{comp.rank}</p>
+                  <p className="text-slate-500 text-sm">{comp.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -101,8 +104,8 @@ const Projects = () => {
 
           {/* Publications Column */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-              <BookOpen className="text-cyan-400" /> Publications
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3 border-b border-white/10 pb-4">
+              <BookOpen className="text-white w-6 h-6" /> Publications
             </h3>
             <div className="space-y-6">
               {publications.map((pub, index) => (
@@ -112,9 +115,9 @@ const Projects = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-all hover:bg-slate-800 group"
+                  className="glass-card p-6 rounded-xl group"
                 >
-                  <h4 className="font-bold text-lg text-slate-200 mb-2 group-hover:text-cyan-300 transition-colors">{pub.title}</h4>
+                  <h4 className="font-bold text-lg text-white mb-2 group-hover:text-white transition-colors">{pub.title}</h4>
                   <div className="flex justify-between items-center text-sm text-slate-400">
                     <span>{pub.venue}</span>
                     <span>{pub.year}</span>
